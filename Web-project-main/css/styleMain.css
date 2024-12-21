@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Marhey&family=Roboto+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
+
+.section1 {
+  width: 98vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#card__welcome {
+  display: block;
+  max-width: 350px;
+  min-height: 330px;
+  background-color: var(--color2);
+  border: solid #0a4d7a;
+  padding: 65px;
+  border-radius: 0 50% 0 50%;
+}
+#card__welcome > span {
+  font-size: 12pt;
+}
+#card__welcome > h1 {
+  font-size: 30pt;
+  margin-bottom: 10px;
+}
+#car1 {
+  aspect-ratio: 1/1;
+  max-height: 700px;
+  min-width: 700px;
+}
+.Separator {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 25pt;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  padding: 5px;
+}
+
+.section2 {
+  width: 98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#products {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 70%;
+  min-height: 300px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  background-image: linear-gradient(to top, #ddd 0%, #ccc 50%, #ddd 100%);
+  border-radius: 5px;
+}
+
+#products > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+}
+#product {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+}
+#products > div > img {
+  position: relative;
+  height: 200px;
+}
+#car__img {
+  transition: 0.5s ease-in-out;
+}
+.car-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(50%);
+  /* Adjust as needed */
+  /* Optional overlay for better color match */
+  position: relative;
+}
+
+.car-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* Adjust color and opacity as needed */
+  mix-blend-mode: multiply;
+}
+#car__img > img {
+  height: 200px;
+  border: solid var(--color2);
+}
+
+#product:hover > #car__img {
+  opacity: 0.5;
+}
+#Car__name {
+  color: var(--colorFont2);
+  display: none;
+}
+#product:hover > #Car__name {
+  display: inline;
+  position: relative;
+  bottom: 50%;
+}
+.section3 {
+  background-image: url(../img/carBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 99vw;
+  min-height: 800px;
+}
+.section3 > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: #13151e;
+  display: block;
+  width: 400px;
+  height: 330px;
+  border: solid #0a4d7a;
+  padding: 65px;
+  border-radius: 5rem;
+}
+.card > h2 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 19pt;
+  margin-bottom: 10px;
+}
+.card > p {
+  font-family: "Fira Sans", sans-serif;
+}
+.section4 {
+  background-image: url(../img/contactImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 99vw;
+  min-height: 800px;
+}
+
+.section4 > .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  color: var(--colorBg);
+  width: 285px;
+  height: 240px;
+  border: solid #0a4d7a;
+  padding: 0px;
+  border-radius: 2rem;
+}
+.contact-card > p {
+  font-size: 15pt;
+}
+.contact-card > svg {
+  scale: 2.5;
+  padding: 50px;
+}
+#upButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  width: 42px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  background-color: #4988ac;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+#upButton.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+#upButton:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+#upButton:hover {
+  transition: ease-in-out 0.2s;
+  background-color: var(--colorHoverBg);
+}
